@@ -12,6 +12,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)//, generator="product_seq")
     private Long pid;
     private String brand;
+    private String pname;
     @Column(nullable = false)
     private String madein;
     private float price;
@@ -22,9 +23,10 @@ public class Product {
     }
 
     //created constructors for the given no. of fields
-    public Product(Long pid, String brand, String madein, float price) {
+    public Product(Long pid, String brand, String madein, String pname,float price) {
         this.pid = pid;
         this.brand = brand;
+        this.pname = pname;
         this.madein = madein;
         this.price = price;
     }
@@ -44,6 +46,14 @@ public class Product {
 
     public void setBrand(String brand) {
         this.brand = brand;
+    }
+
+    public void setName(String pname){
+        this.pname = pname;
+    }
+
+    public String getName(){
+        return pname;
     }
 
     public String getMadein() {
