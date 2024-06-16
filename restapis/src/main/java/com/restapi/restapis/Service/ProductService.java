@@ -14,7 +14,7 @@ public class ProductService {
     
     @Autowired
     private ProductRepository productrepo;
-    //importing Product from model class and we are performing crud operation now
+    // importing Product from model class and we are performing crud operation now
     public Product saveProduct(Product p){
         return productrepo.save(p); //invokes save() meythod predefined in JPA repository
     }
